@@ -229,13 +229,13 @@ h6 {
 .navmenu .header-button.login.active {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
-  padding: 2px 10px;
+  padding: 5px 20px;
 }
 .navmenu .header-button.signup,
 .navmenu .header-button.signup.active {
   background-color: var(--heading-color);
   color: var(--primary-color);
-  padding: 2px 10px;
+  padding: 5px 20px;
 }
 
 /* Navmenu - Desktop */

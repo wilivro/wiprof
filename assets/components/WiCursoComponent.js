@@ -54,6 +54,8 @@ class WiCursoComponent extends HTMLElement {
     }
     article span img {
       width: 100%;
+      z-index: 1;
+      position: relative;
     }
     article span:before {
       content: '';
@@ -63,7 +65,7 @@ class WiCursoComponent extends HTMLElement {
       top: -10px;
       right: -10px;
       background-color: var(--secondary-color);
-      z-index: -1;
+      z-index: 0;
     }
     article b {
       margin: 10px 0;

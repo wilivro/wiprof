@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -47,17 +47,29 @@
       <div
         class="container position-relative d-flex align-items-center justify-content-center"
       >
-        <ul class="my-3">
-          <li>
-            <a href="index.html">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
               <img
                 class="logo"
                 src="assets/img/logo.svg"
                 alt="logo do wiquadro"
               />
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li><a href="/#hero" class="active">Sobre</a></li>
+            <li><a href="/#course">Cursos</a></li>
+            <li><a href="/#webinart">Webinarts</a></li>
+            <li>
+              <a href="/#advantages">Vantagens<br />pedagógicas</a>
+            </li>
+            <!-- <li><a href="#student">Contato</a></li> -->
+            <li><a class="header-button login" href="/#login">LOGIN</a></li>
+            <li>
+              <a class="header-button signup" href="/#login">CADASTRAR</a>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-lg-none bi bi-list"></i>
+        </nav>
       </div>
     </header>
 
@@ -72,7 +84,7 @@
           wiCursoDetalhe.setAttribute("descricao", curso.descricao);
           wiCursoDetalhe.setAttribute(
             "professor",
-            JSON.stringify(curso.professor)
+            JSON.stringify(curso.professor),
           );
           document.body.appendChild(wiCursoDetalhe);
         }

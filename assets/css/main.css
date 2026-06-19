@@ -1,0 +1,890 @@
+/*--------------------------------------------------------------
+# FONTS
+--------------------------------------------------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Ultima Bold';
+  src: url('../fonts/Ultima Bold.ttf');
+}
+
+:root {
+  --default-font: "Montserrat",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Montserrat", sans-serif;
+  --title-font: "Montserrat", sans-serif;
+  --nav-font: "Montserrat",  sans-serif;
+}
+
+:root { 
+  --default-color: #000205;
+  --default-color-rgba: rgb(255, 255, 255, 0.9);
+  --primary-color: #fefbf8;
+  --secondary-color: #005fad;
+  --tertiary-color: #f7a64d;
+  --heading-color: #5a5d5e;
+  --contrast-color: #4487c7;
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #5a5d5e;  /* The default color of the main navmenu links */
+  --nav-hover-color: #fbb03b; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used secfor navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #fbb03b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+body {
+  color: var(--heading-color);
+  background-color: var(--primary-color);
+  font-family: var(--default-font);
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 800;
+}
+
+
+.m-0 {
+  margin: 0;
+}
+.p-1 {
+  padding: 5px;
+}
+.text-1 {
+  font-size: 1rem;
+  text-wrap: nowrap;
+}
+.text-2 {
+  font-size: 2.5rem;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.text-justify {
+  text-align: justify;
+}
+
+.header {
+  color: var(--primary-color);
+  background-color: var(--default-color-rgba);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  line-height: 1;
+  width: 150px;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.header .logo span {
+  color: var(--accent-color);
+  font-size: 26px;
+}
+
+.header .header-social-links {
+  padding: 0 0 0 15px;
+}
+
+.header .header-social-links a {
+  color: color-mix(in srgb, var(--primary-color), transparent 40%);
+  padding-left: 10px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.header .header-social-links a i {
+  line-height: 0px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
+  .header .header-social-links {
+    order: 2;
+    padding: 0 15px 0 0;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.bold {
+  font-weight: bold;
+}
+.secondary-color {
+  color: var(--secondary-color);
+}
+.btn-secondary {
+  background-color: var(--contrast-color);
+  color: var(--primary-color) !important;
+  padding: 10px 20px;
+  box-shadow: -3px 3px var(--secondary-color);
+}
+.btn-tertiary {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color) !important;
+  padding: 10px 20px;
+  font-family: 'Ultima Bold', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navmenu .header-button {
+  border-radius: 20px;
+  padding: 2px 10px;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  margin-left: 10px;
+}
+.navmenu .header-button:hover {
+  color: var(--primary-color);
+}
+.navmenu .header-button.login,
+.navmenu .header-button.login.active {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 2px 10px;
+}
+.navmenu .header-button.signup,
+.navmenu .header-button.signup.active {
+  background-color: var(--heading-color);
+  color: var(--primary-color);
+  padding: 2px 10px;
+}
+
+/* Navmenu - Desktop */
+@media (min-width: 992px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    text-align: center;
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 1rem;
+    font-family: var(--nav-font);
+    text-transform: uppercase;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    letter-spacing: -1px;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
+
+/* Navmenu - Mobile */
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+    display: flex;
+    align-items: center;
+  }
+
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 1.7rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background-color: var(--heading-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--primary-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--heading-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--primary-color);
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow-x: clip;
+}
+
+.background-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.background-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.background-tertiary {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 1199px) {
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Sections
+--------------------------------------------------------------*/
+#hero {
+  background-image: url(../img/bg-hero.svg);
+  background-size: cover;
+}
+#hero .text {
+  width: 40%;
+}
+#hero img {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .folder-item {
+    flex-direction: column-reverse;
+  }
+  #hero .text {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Course Sections
+--------------------------------------------------------------*/
+#course {
+  position: relative;
+}
+#course > img {
+  position: absolute;
+  width: 20%;
+}
+#course > img:nth-child(2) {
+  left: 0;
+  top: 70%;
+  transform: translateX(-20%);
+}
+#course > img:nth-child(3) {
+  right: 0;
+  top: 50%;
+  transform: translateX(50%);
+}
+/* #course article {
+  padding: 0 30px 30px 30px;
+  border-radius: 30px;
+  border: 5px solid var(--contrast-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 550px;
+}
+#course article span {
+  position: relative;
+  margin-top: -20px;
+  margin-left: -0px;
+  width: calc(100% + 20px);
+}
+#course article span img {
+  width: 100%;
+}
+#course article span:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -10px;
+  right: -10px;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
+#course article b {
+  margin: 10px 0;
+  letter-spacing: 1px;
+  line-height: 1.2rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+#course article p {
+  text-align: justify;
+  hyphens: manual;
+  line-height: 1.1rem;
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--default-color);
+}
+#course article a {
+  align-self: end;
+} */
+#course .swiper-button-next,
+#course .swiper-button-prev {
+  transform: scale(2.5);
+}
+#course .swiper-button-prev:after,
+#course .swiper-button-next:after {
+  content: '';
+  width: 100px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/btn-arrow.png);
+  background-position: top;
+  background-size: 37px 43px;
+}
+#course .swiper-button-prev:after {
+  transform: rotate(180deg);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+# Webinart Sections
+--------------------------------------------------------------*/
+#webinart > .container {
+  border-radius: 10px;
+  padding: 0 60px;
+  border: 5px solid var(--tertiary-color);
+}
+#webinart .text:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 025%;
+  transform: scaleX(2.2);
+  width: 50%;
+  height: 20px;
+  background-color: var(--tertiary-color);
+  border-radius: 50px;
+}
+#webinart .text {
+  width: 50%;
+  position: relative;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin: 100px 0 40px 0;
+}
+#webinart p {
+  margin: 20px 0;
+}
+#webinart > .container .container {
+  position: relative;
+  height: 300px;
+  width: 50%;
+}
+#webinart img {
+  position: absolute;
+  margin-left: -50px;
+  top: -125px;
+  width: 675px;
+}
+#webinart a {
+  white-space:  nowrap;
+  font-size: 1.1rem;
+}
+#webinart .balls {
+  position: absolute;
+  bottom: -11px;
+  right: 10px;
+  z-index: 100;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: var(--contrast-color);
+}
+#webinart .balls:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 25px;
+  z-index: 100;
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+  background-color: var(--contrast-color);
+}
+#webinart .balls:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: 55px;
+  z-index: 100;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--contrast-color);
+}
+@media (max-width: 1199px) {
+  #webinart > .container .container {
+    max-height: 300px;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #webinart .text {
+    margin: 60px 0 30px 0;
+  }
+  #webinart img {
+    position: initial;
+    width: 100%;
+    max-width: 675px;
+  }
+  .folder-item {
+    flex-direction: column-reverse;
+  }
+  #webinart .text {
+    width: 100%;
+  }
+}
+@media (max-width: 501px) {
+  #webinart .text:before {
+    height: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Advantages Sections
+--------------------------------------------------------------*/
+
+#advantages .ct-arrows {
+  position: relative;
+}
+#advantages .arrows {
+  position: absolute;
+  width: 331px;
+  height: 145px;
+  left: 0;
+  transform: scale(0.8);
+  background-image: url(../img/seta-amarela.png);
+}
+#advantages h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 4.4rem;
+}
+
+@media (max-width: 1199px) {
+  #advantages .row-2 {
+    flex-direction: column;
+  }
+  #advantages .row-2 > div {
+    width: 100%;
+  }
+  #advantages .ct-arrows {
+    position: unset;
+    flex-direction: column;
+  }
+  #advantages .arrows {
+    position: relative;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Login Sections
+--------------------------------------------------------------*/
+#login {
+  padding-top: 0;
+}
+#login .row {
+  padding-bottom: 300px;
+}
+#login h1 {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  padding: 10px 60px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+#login form {
+  display: grid;
+  place-items: center;
+}
+#login form label img{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+#login form .form-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 50%;
+  transform: translateX(-32px);
+  gap: 10px;
+}
+#login form input {
+  border: none;
+  padding: 10px 0;
+  padding-left: 50px;
+  border-radius: 50px;
+  width: 100%
+}
+#login .bg-down {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url(../img/bg-login.png);
+  background-size: auto 100%;
+  z-index: 0;
+}
+#login .bg-down-1{
+  position: absolute;
+  top: -140px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg-login-1.svg);
+  height: 50%;
+}
+#login .bg-down-2{
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg-login-2.svg);
+  height: 410px;
+}
+@media (max-width: 1199px) {
+  #login form .form-group {
+    width: 80%;
+  }
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  background-color: var(--tertiary-color);
+}

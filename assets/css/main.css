@@ -527,6 +527,11 @@ section,
   overflow-x: clip;
 }
 
+wi-curso-detalhe {
+  display: block;
+  scroll-margin-top: 100px;
+}
+
 .background-secondary {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -543,7 +548,8 @@ section,
 
 @media (max-width: 1199px) {
   section,
-  .section {
+  .section,
+  wi-curso-detalhe {
     scroll-margin-top: 66px;
   }
 }

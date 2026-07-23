@@ -13,15 +13,15 @@ class WiHeaderComponent extends HTMLElement {
             <li>
               <img class="logo" src="assets/img/logo.svg" alt="logo do wiquadro" />
             </li>
-            <li><a href="/#hero" class="active">Sobre</a></li>
-            <li><a href="/#course">Cursos</a></li>
-            <li><a href="/#webinart">Webinarts</a></li>
+            <li><a href="./#hero" class="active">Sobre</a></li>
+            <li><a href="./#course">Cursos</a></li>
+            <li><a href="./#webinart">Webinarts</a></li>
             <li>
-              <a href="/#advantages">Vantagens<br />pedagógicas</a>
+              <a href="./#advantages">Vantagens<br />pedagógicas</a>
             </li>
-            <li><a class="header-button login" href="/#login">LOGIN</a></li>
+            <li><a class="header-button login" href="./#login">LOGIN</a></li>
             <li>
-              <a class="header-button signup" href="/#login">CADASTRAR</a>
+              <a class="header-button signup" href="./#login">CADASTRAR</a>
             </li>
           </ul>
           <i class="mobile-nav-toggle d-lg-none bi bi-list"></i>

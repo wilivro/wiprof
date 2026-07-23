@@ -52,7 +52,7 @@ class WiCursoComponent extends HTMLElement {
     article span {
       position: relative;
       margin-top: -20px;
-      margin-left: -0px;
+      margin-left: -10px;
       width: calc(100% + 20px);
     }
     article span img {
@@ -78,6 +78,10 @@ class WiCursoComponent extends HTMLElement {
       text-align: center;
       font-weight: 800;
       color: var(--secondary-color);
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     article p {
       text-align: justify;
@@ -87,6 +91,7 @@ class WiCursoComponent extends HTMLElement {
       line-height: 1.1rem;
       font-weight: 200;
       font-size: 1rem;
+      height: 250px;
       color: var(--default-color);
     }
     article a {

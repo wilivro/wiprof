@@ -1,9 +1,12 @@
 class WiCursoComponent extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: 'open' });
-    shadow.appendChild(this.build());
-    shadow.appendChild(this.styles());
+    this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    this.shadowRoot.appendChild(this.build());
+    this.shadowRoot.appendChild(this.styles());
   }
 
   build() {
@@ -12,6 +15,7 @@ class WiCursoComponent extends HTMLElement {
     const img = document.createElement('img');
     img.setAttribute('src', this.getAttribute('src'));
     img.setAttribute('alt', this.getAttribute('alt'));
+    img.onerror = () => img.src = 'assets/img/cursos/default.png';
 
     const b = document.createElement('b');
     b.innerHTML = this.getAttribute('title');
@@ -21,7 +25,6 @@ class WiCursoComponent extends HTMLElement {
 
     const a = document.createElement('a');
     a.setAttribute('href', this.getAttribute('href'));
-    a.setAttribute('target', '_blank');
     a.innerHTML = this.getAttribute('button-text');
     a.classList.add('btn-tertiary');
 
@@ -56,6 +59,7 @@ class WiCursoComponent extends HTMLElement {
       width: 100%;
       z-index: 1;
       position: relative;
+      border-radius: 32px;
     }
     article span:before {
       content: '';
@@ -70,14 +74,16 @@ class WiCursoComponent extends HTMLElement {
     article b {
       margin: 10px 0;
       letter-spacing: 1px;
-      line-height: 1.2rem;
+      line-height: 1.5rem;
       text-align: center;
       font-weight: 800;
       color: var(--secondary-color);
     }
     article p {
       text-align: justify;
-      hyphens: manual;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
       line-height: 1.1rem;
       font-weight: 200;
       font-size: 1rem;

@@ -1,5 +1,7 @@
 export const cursos = {
   1: {
+    preview: `O curso é estruturado para capacitar professores no uso de metodologias ativas, utilizando exemplos práticos e ferramentas tecnológicas.
+      <br /><br />Este curso tem como objetivo capacitar professores no uso de metodologias ativas, utilizando exemplos práticos e ferramentas tecnológicas.`,
     titulo: "METODOLOGIAS ATIVAS:<br />ESTRATÉGIAS PARA SUA IMPLEMENTAÇÃO",
     professor: [{
       name: "Andréa César Pedrosa"
@@ -18,6 +20,8 @@ export const cursos = {
     ],
   },
   2: {
+    preview: `O curso tem como objetivo desenvolver técnicas de como integrar as tipologias de metodologias ativas ao dia a dia da sala de aula.
+      <br /><br />Este curso tem como objetivo desenvolver técnicas para integrar as tipologias de metodologias ativas ao dia a dia da sala de aula.`,
     titulo: "METODOLOGIAS ATIVAS E SUAS INTERAÇÕES",
     professor: [{
       name: "Andréa César Pedrosa"
@@ -37,6 +41,8 @@ export const cursos = {
     ]
   },
   3: {
+    preview: `Descubra como a BNCC pode ser aliada do professor na construção de uma educação mais justa, consistentemente alinhada com os direitos da aprendizagem. 
+      <br /><br />Este curso tem como objetivo demonstrar como a BNCC pode ser uma aliada do professor na construção de uma educação mais justa, consistentemente em sintonia com os direitos da aprendizagem.`,
     titulo: "CONHECENDO A BASE NACIONAL COMUM CURRICULAR",
     professor: [
       {name:"Inês Barbosa de Oliveira"},
@@ -57,6 +63,8 @@ export const cursos = {
     ]
   },
   4: {
+    preview: `Aprenda a mapear competências específicas da Língua Portuguesa na BNCC e aplicá-las em propostas didáticas contextualizadas.
+      <br /><br />Este curso orienta o professor a mapear as competências específicas da Língua Portuguesa na BNCC e a aplicá-las em propostas didáticas contextualizadas. `,
     titulo: "A BNCC E O ENSINO DA LINGUA PORTUGUESA",
     professor: [
       {name:"Inês Barbosa de Oliveira"},
@@ -74,6 +82,8 @@ export const cursos = {
     ]
   },
   5: {
+    preview: `Entenda como estruturar atividades matemáticas que desenvolvem raciocínio lógico, resolução de problemas e argumentação. 
+      <br /><br />Este curso tem como objetivo ensinar a estruturar atividades matemáticas que desenvolvam o raciocínio lógico, a resolução de problemas e a argumentação crítica dos estudantes.`,
     titulo: "A BNCC E O ENSINO DA MATEMÁTICA",
     professor: [
       {name:"Inês Barbosa de Oliveira"},
@@ -92,6 +102,8 @@ export const cursos = {
     ]
   },
   6: {
+    preview: `Aprenda os princípios da Comunicação Não Violenta - CNV e técnicas para melhorar o diálogo, prevenir conflitos e promover um ambiente escolar mais saudável. 
+      <br /><br />Este curso tem como objetivo apresentar os princípios da Comunicação Não Violenta - CNV e técnicas para melhorar o diálogo, prevenir conflitos e promover um ambiente escolar mais saudável.`,
     titulo: "COMUNICAÇÃO NÃO VIOLENTA:<br />ENTENDENDO E IDENTIFICANDO COMO ACONTECE NA ESCOLA",
     professor: [{name:"Elson Santos Silva", img: "elson-santos.png"}],
     descricao:
@@ -112,6 +124,8 @@ export const cursos = {
     ]
   },
   7: {
+    preview: `É uma partilha com você, professor ou professora, ao desafio de enfrentar as dificuldades da sala de aula, com relação à comunicação. 
+      <br /><br />Este curso tem como objetivo promover uma partilha sobre os desafios de comunicação entre professores e estudantes na sala de aula.`,
     titulo: "COMUNICAÇÃO NÃO VIOLENTA:<br />DESAFIOS A SEREM ENFRENTADOS NA SALA DE AULA",
     professor: [{name:"Elson Santos Silva", img: "elson-santos.png"}],
     descricao:
@@ -132,6 +146,8 @@ export const cursos = {
     ]
   },
   8: {
+    preview: `Educar é acolher. Este curso prepara você para lidar com a diversidade em sala de aula, respeitando os ritmos e as necessidades de cada aluno com TEA. 
+      <br /><br />Este curso tem como objetivo preparar o educador para lidar com a diversidade em sala de aula, respeitando os ritmos e acolhendo as necessidades de alunos com TEA.`,
     titulo: "TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS ESCOLAS:<br />ASPECTOS GERAIS",
     professor: [{name: "Letícia Cottini", img: "leticia-cottini.png"}],
     descricao:
@@ -151,6 +167,8 @@ export const cursos = {
     ]
   },
   9: {
+    preview: `No curso sobre o Transtorno do Espectro Autista - TEA, vamos orientar os professores, a como lidar com essas dificuldades em sala de aula. 
+      <br /><br />Este curso tem como objetivo orientar o professor sobre como lidar com os desafios em sala de aula envolvendo estudantes com o Transtorno do Espectro Autista - TEA. `,
     titulo: "TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS ESCOLAS:<br />PRINCIPAIS SINTOMAS E COMO ENFRENTÁ-LOS",
     professor: [{name: "Letícia Cottini", img: "leticia-cottine.png"}],
     descricao:
@@ -171,6 +189,8 @@ export const cursos = {
     ]
   },
   10: {
+    preview: `A inteligência emocional (IE) nos capacita a viver de forma mais consciente, a construir conexões significativas e a enfrentar desafios com equilíbrio. 
+      <br /><br />Este curso tem como objetivo capacitar o educador a desenvolver sua Inteligência Emocional (IE), permitindo-lhe viver de forma mais consciente, construir conexões significativas e enfrentar desafios com equilíbrio.`,
     titulo: "GESTÃO EMOCIONAL:<br />CAMINHOS PARA O EQUILÍBRIO E BEM-ESTAR - PARTE I",
     professor: [{name: "Mariza Soares", img: "mariza-soares.png"}],
     descricao:
@@ -192,6 +212,8 @@ export const cursos = {
     ]
   },
   11: {
+    preview: `Incorporar a Inteligência Emocional (IE) em sua rotina diária não apenas transforma sua vida pessoal e profissional. 
+      <br /><br />Este curso tem como objetivo demonstrar como a incorporação da Inteligência Emocional (IE) na rotina diária pode transformar positivamente a vida pessoal e profissional do educador.`,
     titulo: "GESTÃO EMOCIONAL:<br />CAMINHOS PARA O EQUILÍBRIO E BEM-ESTAR - PARTE II",
     professor: [{name: "Mariza Soares", img: "mariza-soares.png"}],
     descricao:
@@ -213,6 +235,8 @@ export const cursos = {
     ]
   },
   12: {
+    preview: `Tem como objetivo garantir a inserção da educação digital nos ambientes escolares, em todos os níveis e modalidades de ensino. 
+      <br /><br />Este curso tem como objetivo orientar e apoiar a inserção da educação digital nos ambientes escolares, em todos os níveis e modalidades de ensino.`,
     titulo: "TECNOLOGIAS EDUCACIONAIS - FUNDAMENTOS",
     professor: [{name: "Andréa César Pedrosa", img: "mariza-soares.png"}],
     descricao:
@@ -230,6 +254,8 @@ export const cursos = {
     ]
   },
   13: {
+    preview: `Tem como objetivo trazer a vivência prática para ser utilizada em sala de aula pelos gestores e profissionais da educação. 
+      <br /><br />Este curso tem como objetivo capacitar o educador a integrar a vida comum às ferramentas tecnológicas nas práticas em sala de aula.`,
     titulo: "TECNOLOGIAS EDUCACIONAIS - APLICAÇÕES",
     professor: [{name: "Andréa César Pedrosa", img: "mariza-soares.png"}],
     descricao:

@@ -34,14 +34,12 @@ class WiCursoDetalheComponent extends HTMLElement {
     
     const row = document.createElement('div');
     row.classList.add('row');
-    row.classList.add('col-lg-8');
-    row.classList.add('offset-lg-2');
     
     const col = document.createElement('span');
     col.classList.add('col-12');
     
     const h2 = document.createElement('h2');
-    h2.classList.add('text-center');
+    h2.classList.add('text-left');
     h2.innerHTML = this.getAttribute('titulo');
     
     const container2 = document.createElement('div');
@@ -92,7 +90,24 @@ class WiCursoDetalheComponent extends HTMLElement {
     desc.classList.add('py-3');
     desc.classList.add('m-0');
     desc.innerHTML = this.getAttribute('descricao');
-    
+
+    const carga = document.createElement('div');
+    carga.classList.add('row');
+    carga.classList.add('py-3');
+
+    const detalhes = JSON.parse(this.getAttribute('detalhe') || '[]');
+    carga.innerHTML = `<h5 class="col-12 mb-3">${this.getAttribute('carga')}</h5>`;
+
+    const detalheList = document.createElement('ul');
+    detalheList.classList.add('col-12');
+    detalheList.classList.add('detalhe');
+    detalhes.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      detalheList.appendChild(li);
+    });
+    carga.appendChild(detalheList);
+
     const img = document.createElement('img');
     img.setAttribute('src', `../assets/img/cursos/${id}.png`);
     img.setAttribute('alt', this.getAttribute('alt'));
@@ -104,16 +119,17 @@ class WiCursoDetalheComponent extends HTMLElement {
     container.appendChild(row);
     article.appendChild(container2);
     container2.appendChild(row2);
+    container2.appendChild(carga);
     container2.appendChild(row3);
 
     row.appendChild(col);
     col.appendChild(h2);
     row2.appendChild(left);
     left.appendChild(img);
-    
+
     row2.appendChild(right);
     right.appendChild(desc);
-    article.appendChild(container2);
+    right.appendChild(carga);
 
     return article;
   }

@@ -55,6 +55,8 @@
           wiCursoDetalhe.setAttribute("id", key);
           wiCursoDetalhe.setAttribute("titulo", curso.titulo);
           wiCursoDetalhe.setAttribute("descricao", curso.descricao);
+          wiCursoDetalhe.setAttribute("carga", curso.carga);
+          wiCursoDetalhe.setAttribute("detalhe", JSON.stringify(curso.detalhe));
           wiCursoDetalhe.setAttribute(
             "professor",
             JSON.stringify(curso.professor),

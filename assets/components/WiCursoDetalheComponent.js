@@ -5,10 +5,10 @@ class WiCursoDetalheComponent extends HTMLElement {
     
     const bootstrap = document.createElement("link");
     bootstrap.setAttribute("rel", "stylesheet");
-    bootstrap.setAttribute("href", "../assets/vendor/bootstrap/css/bootstrap.min.css");
+    bootstrap.setAttribute("href", "assets/vendor/bootstrap/css/bootstrap.min.css");
     const link = document.createElement("link");
     link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", "../assets/css/main.css");
+    link.setAttribute("href", "assets/css/main.css");
     
     shadow.appendChild(bootstrap);
     shadow.appendChild(link);
@@ -20,7 +20,7 @@ class WiCursoDetalheComponent extends HTMLElement {
   }
 
   build() {
-    const DEFAULT = '../assets/img/cursos/default.png';
+    const DEFAULT = 'assets/img/cursos/default.png';
     const id = this.getAttribute('id')
     const article = document.createElement('article');
     article.setAttribute('id', id);
@@ -66,7 +66,7 @@ class WiCursoDetalheComponent extends HTMLElement {
       row3.appendChild(col);
 
       const imgProf = document.createElement('img');
-      imgProf.setAttribute('src', `../assets/img/professores/${prof.img}`);
+      imgProf.setAttribute('src', `assets/img/professores/${prof.img}`);
       imgProf.setAttribute('alt', prof.name);
       imgProf.onerror = () => imgProf.src = DEFAULT;
       col.appendChild(imgProf);
@@ -109,7 +109,7 @@ class WiCursoDetalheComponent extends HTMLElement {
     carga.appendChild(detalheList);
 
     const img = document.createElement('img');
-    img.setAttribute('src', `../assets/img/cursos/${id}.png`);
+    img.setAttribute('src', `assets/img/cursos/${id}.png`);
     img.setAttribute('alt', this.getAttribute('alt'));
 
     img.onerror = () => img.src = DEFAULT;

@@ -35,7 +35,9 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+    <script src="assets/js/slugify.js" defer></script>
     <script src="assets/components/WiCursoDetalheComponent.js" defer></script>
+    <script src="assets/components/WiProfessorComponent.js" defer></script>
     <script src="assets/components/WiPedagogicalAdvantage.js" defer></script>
     <script src="assets/components/WiHeaderComponent.js" defer></script>
 
@@ -45,9 +47,11 @@
 
   <body class="index-page">
     <wi-header></wi-header>
+    <wi-professor-modal></wi-professor-modal>
 
     <script type="module">
       import { cursos } from "./assets/js/course.js";
+      import { professores } from "./assets/js/professores.js";
       for (const key in cursos) {
         if (Object.hasOwnProperty.call(cursos, key)) {
           const curso = cursos[key];
@@ -64,6 +68,14 @@
           document.body.appendChild(wiCursoDetalhe);
         }
       }
+
+      document.addEventListener("wi-professor:open", (e) => {
+        const prof = professores[e.detail.slug];
+        const modal = document.querySelector("wi-professor-modal");
+        modal.open(
+          prof || { name: e.detail.slug, bio: "Biografia não encontrada." },
+        );
+      });
     </script>
 
     <!-- Scroll Top -->

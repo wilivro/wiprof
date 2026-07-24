@@ -57,25 +57,32 @@ class WiCursoDetalheComponent extends HTMLElement {
     row3.innerHTML = `<h2 class="col-12 mb-3">Professor${!!professores[1] ? 'es' : '(a)'}</h2>`;
     
     professores.forEach(prof => {
-      const col = document.createElement('a');
-      col.setAttribute('href', `#`);
-      col.classList.add('prof');
-      col.classList.add('col-12');
-      col.classList.add('col-md-6');
-      col.classList.add('col-lg-3');
-      row3.appendChild(col);
+      const profBtn = document.createElement('button');
+      profBtn.setAttribute('type', 'button');
+      profBtn.classList.add('prof');
+      profBtn.classList.add('col-12');
+      profBtn.classList.add('col-md-6');
+      profBtn.classList.add('col-lg-3');
+      profBtn.addEventListener('click', () => {
+        this.dispatchEvent(new CustomEvent('wi-professor:open', {
+          detail: { slug: slugify(prof.name) },
+          bubbles: true,
+          composed: true,
+        }));
+      });
+      row3.appendChild(profBtn);
 
       const imgProf = document.createElement('img');
       imgProf.setAttribute('src', `assets/img/professores/${prof.img}`);
       imgProf.setAttribute('alt', prof.name);
       imgProf.onerror = () => imgProf.src = DEFAULT;
-      col.appendChild(imgProf);
+      profBtn.appendChild(imgProf);
 
       const profElem = document.createElement('p');
       profElem.classList.add('m-0');
       profElem.classList.add('fw-bold');
       profElem.textContent = prof.name.trim();
-      col.appendChild(profElem);
+      profBtn.appendChild(profElem);
     })
     
     const left = document.createElement('div');
@@ -166,6 +173,10 @@ class WiCursoDetalheComponent extends HTMLElement {
       align-items: center;
       margin-bottom: 1rem;
       cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      font: inherit;
     }
     article .prof:hover p {
       color: #007bff;

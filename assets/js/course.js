@@ -4,7 +4,7 @@ export const cursos = {
       <br /><br />Este curso tem como objetivo capacitar professores no uso de metodologias ativas, utilizando exemplos práticos e ferramentas tecnológicas.`,
     titulo: "METODOLOGIAS ATIVAS:<br />ESTRATÉGIAS PARA SUA IMPLEMENTAÇÃO",
     professor: [{
-      name: "Andréa César Pedrosa"
+      name: "Andréa César Pedrosa", img: "andrea-cesar.png"
     }],
     descricao:  
       `As metodologias ativas são ferramentas que colocam o aluno no centro do processo de aprendizagem, promovendo o protagonismo, o engajamento e o desenvolvimento de competências para a resolução de problemas, o pensamento crítico e o senso de colaboração. Essa abordagem está alinhada às diretrizes pedagógicas da Base Nacional Comum Curricular (BNCC), que incentiva práticas pedagógicas inovadoras e contextualizadas.
@@ -24,7 +24,7 @@ export const cursos = {
       <br /><br />Este curso tem como objetivo desenvolver técnicas para integrar as tipologias de metodologias ativas ao dia a dia da sala de aula.`,
     titulo: "METODOLOGIAS ATIVAS E SUAS INTERAÇÕES",
     professor: [{
-      name: "Andréa César Pedrosa"
+      name: "Andréa César Pedrosa", img: "andrea-cesar.png"
     }],
     descricao:
       `As metodologias ativas são ferramentas que colocam o aluno no centro do processo de aprendizagem, promovendo o protagonismo, o engajamento e o desenvolvimento de competências para a resolução de problemas, o pensamento crítico e o senso de colaboração. Essa abordagem está alinhada às diretrizes pedagógicas da Base Nacional Comum Curricular (BNCC), que incentiva práticas pedagógicas inovadoras e contextualizadas. 
@@ -238,7 +238,7 @@ export const cursos = {
     preview: `Tem como objetivo garantir a inserção da educação digital nos ambientes escolares, em todos os níveis e modalidades de ensino. 
       <br /><br />Este curso tem como objetivo orientar e apoiar a inserção da educação digital nos ambientes escolares, em todos os níveis e modalidades de ensino.`,
     titulo: "TECNOLOGIAS EDUCACIONAIS - FUNDAMENTOS",
-    professor: [{name: "Andréa César Pedrosa", img: "mariza-soares.png"}],
+    professor: [{name: "Andréa César Pedrosa", img: "andrea-cesar.png"}],
     descricao:
       `O grande divisor de águas sobre o papel do uso da tecnologia no contexto educacional ocorreu com o impacto do isolamento social no período da pandemia da COVID-19, momento em que a importância do uso assertivo das tecnologias digitais e virtuais foi explicitada. Nesse período, também ficou claro o grande abismo de acesso às mídias digitais e a grande defasagem quanto ao domínio dessas tecnologias e à fluência digital dos professores. Nesse contexto, milhares de profissionais da educação foram pegos de surpresa, tendo que se apropriar de conhecimentos para os quais não foram preparados, resultando o medo de usar a tecnologia. Esta formação propõe uma trilha estruturada para promover o desenvolvimento e o aprimoramento da fluência digital, abordando estratégias e formas de aplicar as tecnologias como ferramentas úteis para potencializar a aprendizagem dos estudantes e o desempenho profissional docente.`,
     carga: `Carga horária de 20h, com 05 aulas:<br />
@@ -257,7 +257,7 @@ export const cursos = {
     preview: `Tem como objetivo trazer a vivência prática para ser utilizada em sala de aula pelos gestores e profissionais da educação. 
       <br /><br />Este curso tem como objetivo capacitar o educador a integrar a vida comum às ferramentas tecnológicas nas práticas em sala de aula.`,
     titulo: "TECNOLOGIAS EDUCACIONAIS - APLICAÇÕES",
-    professor: [{name: "Andréa César Pedrosa", img: "mariza-soares.png"}],
+    professor: [{name: "Andréa César Pedrosa", img: "andrea-cesar.png"}],
     descricao:
       `O curso <b>Tecnologias Educacionais - Aplicações</b> tem como objetivo fortalecer e desenvolver a fluência digital do profissional docente, utilizando exemplos práticos e ferramentas tecnológicas, a fim de criar uma experiência de aprendizagem dinâmica e interativa. As atividades propostas para cada momento de aula estão articuladas com o material didático da Ensinart, finalizando com uma atividade contextualizada que mobiliza os conteúdos estudados ao longo do curso. A proposta requer a participação ativa, a mente aberta e a dedicação aos estudos, afinal, uma vez professor, eternamente estudante!`,
     carga: `Carga horária de 20h, com 05 aulas:<br />
